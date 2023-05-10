@@ -1,0 +1,16 @@
+@import '../../App.scss';
+
+.hidden {
+  @media screen and (max-width:768px)  {
+    display: none;
+  }
+}
+
+.navlink {
+  color: $white;
+  font-family: $ff;
+  font-weight: bold;
+  font-size: 0.8125rem; 
+  line-height: 25/13;
+  letter-spacing: 2px;
+}   

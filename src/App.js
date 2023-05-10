@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+//Components
+import Header from './organisms/Header';
+
+//SCSS Files
+import './App.scss';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <div className='hr' ></div>
+
+      <div>
+        <div>
+          <p>new product</p>
+          <h1>xx99 mark II heaphones</h1>
+          <p>
+            Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.
+          </p>
+        </div>
+        <button>
+          see product
+        </button>
+      </div>
+
+
     </div>
   );
 }

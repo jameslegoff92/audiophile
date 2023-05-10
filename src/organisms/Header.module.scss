@@ -1,0 +1,24 @@
+@import '../App.scss';
+
+.header {
+  background-color: $black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1.5rem;
+}
+
+.header__logo {
+  height: 0.9375rem;
+  width: 1rem; 
+}
+
+.header__cart {
+  height: 1.25rem;
+  width: 1.4375rem;
+}
+
+.header__navIcon {
+  height: 15px;
+  width: 16px;
+}
