@@ -18,6 +18,10 @@ $ff: 'Manrope', sans-serif;
   box-sizing: border-box;
 }
 
+body {
+  min-width: 301px;
+}
+
 .hr {
   border-bottom: solid 1px #979797;
   opacity: 10.4%;

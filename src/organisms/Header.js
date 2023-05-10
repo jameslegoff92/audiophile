@@ -11,16 +11,19 @@ import cart from "../assets/shared/desktop/icon-cart.svg";
 
 function Header() {
   return (
-    <header className={scss.header}>
-      <div className={scss.header__navIcon} >
-        <MobileNav />
+    <header>
+      <div className={scss.header}>
+        <div className={scss.header__navIcon}>
+          <MobileNav />
+        </div>
+
+        <img className={scss.header__logo} src={logo} alt="Company Logo" />
+
+        <Nav />
+
+        <img className={scss.header__cart} src={cart} alt="Store Shopping Cart" />
       </div>
-
-      <img src={logo} alt="Company Logo" />
-
-      <Nav />
-
-      <img className={scss.header__cart} src={cart} alt="Store Shopping Cart" />
+      
     </header>
   );
 }

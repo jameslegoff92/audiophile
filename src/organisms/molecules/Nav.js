@@ -6,18 +6,18 @@ function Nav() {
 
   return (
     <nav className={hiddenClass} >
-      <ul>
+      <ul className={scss.nav} > 
         <li>
-          <a href="/"> home </a>
+          <a className={scss.navlink}  href="/"> home </a>
         </li>
         <li>
-          <a href="/"> headphones </a>
+          <a className={scss.navlink} href="/"> headphones </a>
         </li>
         <li>
-          <a href="/"> speakers </a>
+          <a className={scss.navlink} href="/"> speakers </a>
         </li>
         <li>
-          <a href="/"> earphones </a>
+          <a className={scss.navlink} href="/"> earphones </a>
         </li>
       </ul>
     </nav>

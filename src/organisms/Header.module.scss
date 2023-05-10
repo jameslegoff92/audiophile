@@ -1,16 +1,30 @@
 @import '../App.scss';
 
+header {
+  background-color: $black;
+}
+
 .header {
   background-color: $black;
+  border-bottom: 1px solid rgba(151, 151, 151, 0.4);
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 2rem 1.5rem;
+
+  @media screen and (min-width: 48rem) {
+    margin: 0 auto;
+    width: 89.71%;
+    max-width: 69.375rem;
+  }
 }
 
 .header__logo {
-  height: 0.9375rem;
-  width: 1rem; 
+  margin-right: auto;
+
+  @media screen and (min-width: 48.0625rem) {
+    margin-right: 0;
+  }  
 }
 
 .header__cart {
@@ -18,7 +32,13 @@
   width: 1.4375rem;
 }
 
+
+
 .header__navIcon {
-  height: 15px;
-  width: 16px;
+  height: 0.9375rem;
+  width: 1rem;
+  margin-right: 2.625rem;
+  @media screen and (min-width: 48.0625rem) {
+    display: none;
+  }
 }
