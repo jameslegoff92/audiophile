@@ -1,7 +1,8 @@
-import "./Card.module.css";
+function Card({ children, style }) {
 
-function Card({ children }) {
-  return <div>{children}</div>;
+  const styles = `${style}` ;
+
+  return <div className={styles} >{children}</div>;
 }
 
 export default Card;

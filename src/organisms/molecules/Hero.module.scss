@@ -1,0 +1,28 @@
+.hero {
+  min-height: 37.5rem;
+  padding-top: 106px;
+  background: url("../../assets/home/mobile/image-header.jpg") no-repeat center center/100% 100%;
+  
+  @media screen and (min-width: 48rem) {
+    background: url("../../assets/home/tablet/image-header.jpg") no-repeat center center/100% 100%;
+    
+  }
+
+  @media screen and (min-width: 90rem) {
+    background: url("../../assets/home/tablet/image-header.jpg") no-repeat center center/100% 100%;
+  }
+}
+
+.hero__wrapper {
+  text-align: center;
+  margin: 0 auto;
+  width: calc(328/375) * 100%;
+}
+
+.hero__heading {
+  margin-bottom: 24px;
+}
+
+.hero__text {
+  margin-bottom: 28px;
+}

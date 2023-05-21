@@ -1,6 +1,7 @@
 //Components
 import Nav from "./molecules/Nav";
 import MobileNav from "./molecules/MobileNav";
+import Hero from './molecules/Hero';
 
 //SCSS Files
 import scss from "./Header.module.scss";
@@ -23,7 +24,9 @@ function Header() {
 
         <img className={scss.header__cart} src={cart} alt="Store Shopping Cart" />
       </div>
-      
+
+      <Hero />
+
     </header>
   );
 }
