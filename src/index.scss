@@ -1,3 +1,16 @@
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
+  min-width: 22.4375rem;
   overflow-x: hidden;
+  font-size: 1rem;
+}
+
+.hr {
+  border-bottom: solid 1px #979797;
+  opacity: 10.4%;
 }

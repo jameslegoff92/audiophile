@@ -1,9 +1,10 @@
 //Components
-import Card from "./Card";
-import Typography from "./atoms/Typography";
+import Card from './Card';
+import Button from './atoms/Button';
+import Typography from './atoms/Typography';
 
 //SCSS
-import scss from "./Hero.module.scss";
+import scss from './Hero.module.scss';
 
 function Hero() {
   let hero = `${scss["hero"]}`;
@@ -26,7 +27,9 @@ function Hero() {
           <Typography styles={text} style={{ opacity: 0.75 }} type="p" color="light">
             Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.
           </Typography>
-          <button>see product</button>
+          <Button type="dark" >
+            see product
+          </Button>
         </Card>
       </div>
     </div>

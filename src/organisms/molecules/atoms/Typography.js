@@ -7,12 +7,12 @@ import scss from "./Typography.module.scss";
  * A customizable react component for displaying different heading and paragraph elements.
  * 
  * @component
- * @param {object} style [{{ backgroundColor: 'red' }}] - Sets inline styling css for the component.
- * @param {string} styles [parentCSS['card__heading']] - Adds css class styling from a parent component.
- * @param {string} type ['h1'] - Adds local class style to the component
- *                               Possible values: 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'text', 'subtitle'
- * @param {string} color ['light'] - Adds an alternative css styling to the component.
- *                                  Possible values: 'light'
+ * @param {object} style - Sets inline styling css for the component.
+ * @param {string} styles - Adds css class styling from a parent component.
+ * @param {string} type - Adds local class style to the component
+ *                        Possible values: 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'text', 'subtitle'
+ * @param {string} color - Adds an alternative css styling to the component.
+ *                         Possible values: 'light'
  * @return - Returns a single element
  * 
  * @example

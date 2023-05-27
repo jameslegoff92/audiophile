@@ -1,0 +1,49 @@
+@import '../../../variables.scss';
+
+.btn {
+  border: none;
+  font-size: 0.8125rem;
+  font-weight: bold;
+  height: 3rem;
+  letter-spacing: 0.0625rem;
+  text-transform: uppercase;
+  width: 10rem;  
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn--light {
+  background-color: transparent;
+  border: 1px solid black;
+  color: $black;
+}
+
+.btn--light:hover {
+  background-color: $black;
+  color: $white;
+}
+
+.btn--dark {
+  background-color: $orange;
+  color: $white;
+}
+
+.btn--dark:hover {
+  background-color: $light-orange;
+}
+
+.btn--alt {
+  color: $black;
+  background-color: transparent;
+  opacity: 0.5;
+}
+
+.btn--alt:hover {
+  color: $orange;
+}
+
+.btn__icon {
+  margin-left: 1rem;
+}
