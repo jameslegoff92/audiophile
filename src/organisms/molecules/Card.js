@@ -1,8 +1,10 @@
-function Card({ children, style }) {
+import scss from './Card.module.scss';
 
-  const styles = `${style}` ;
+function Card({ children, styles, style }) {
 
-  return <div className={styles} >{children}</div>;
+  const classes = `${styles} ${scss}` ;
+
+  return <div style={style} className={classes} >{children}</div>;
 }
 
 export default Card;

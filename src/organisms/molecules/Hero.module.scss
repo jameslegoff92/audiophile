@@ -1,15 +1,26 @@
 .hero {
-  min-height: 37.5rem;
-  padding-top: 106px;
+  background-color: rgb(25,25,25);
+}
+
+.hero__container {
+  min-height: clamp(37.5rem, calc(600px + 1vw), 45.5625rem);
+  padding: clamp(6.625rem, calc(6.625rem + 1.7vw), 8rem) 0 0 0;
   background: url("../../assets/home/mobile/image-header.jpg") no-repeat center center/100% 100%;
   
-  @media screen and (min-width: 48rem) {
+
+  
+  @media screen and (min-width: 33.75rem) {
     background: url("../../assets/home/tablet/image-header.jpg") no-repeat center center/100% 100%;
+    margin: 0 auto;
+    width: 87.2%;
+    max-width: 51.375rem;
     
   }
-
-  @media screen and (min-width: 90rem) {
-    background: url("../../assets/home/tablet/image-header.jpg") no-repeat center center/100% 100%;
+  
+  @media screen and (min-width: 75rem) {
+    background: url("../../assets/home/desktop/image-hero.jpg") no-repeat 50% -50px/120% 100%;
+    width: 100%;
+    max-width: 69.375rem; 
   }
 }
 
@@ -17,6 +28,17 @@
   text-align: center;
   margin: 0 auto;
   width: calc(328/375) * 100%;
+  max-width: 31.125rem;
+
+  @media screen and (min-width: 75rem) {
+    text-align: left;
+    width: 100%;
+    margin: 0 auto 0 0;
+  }
+}
+
+.hero__subtitle {
+  margin-bottom: clamp(1rem, calc(12px + 1vw), 1.5rem);
 }
 
 .hero__heading {
@@ -24,5 +46,12 @@
 }
 
 .hero__text {
-  margin-bottom: 1.75rem;
+  margin: 0 auto clamp(1.75rem, calc(20px + 1vw), 2.5rem);
+  width: calc(264/328) * 100%;
+  max-width: 21.8125rem;
+
+  @media screen and (min-width: 75rem) {
+    text-align: left;
+    margin: 0 0 clamp(1.75rem, calc(20px + 1vw), 2.5rem) 0;
+  }
 }

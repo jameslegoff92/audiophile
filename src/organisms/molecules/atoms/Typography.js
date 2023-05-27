@@ -1,7 +1,30 @@
 //SCSS
 import scss from "./Typography.module.scss";
 
-function Typography({ styles, type, children, color }) {
+/**
+ * <Typography/> 
+ * 
+ * A customizable react component for displaying different heading and paragraph elements.
+ * 
+ * @component
+ * @param {object} style [{{ backgroundColor: 'red' }}] - Sets inline styling css for the component.
+ * @param {string} styles [parentCSS['card__heading']] - Adds css class styling from a parent component.
+ * @param {string} type ['h1'] - Adds local class style to the component
+ *                               Possible values: 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'text', 'subtitle'
+ * @param {string} color ['light'] - Adds an alternative css styling to the component.
+ *                                  Possible values: 'light'
+ * @return - Returns a single element
+ * 
+ * @example
+ * <Typography
+ *  style={{backgroundColor: 'red'}}
+ *  styles={parentCSS['card__heading']}
+ *  type='h1'
+ *  color='light'
+ * />
+ */
+
+function Typography({ style, styles, type, children, color }) {
   let element;
 
   switch (type) {
@@ -57,13 +80,13 @@ function Typography({ styles, type, children, color }) {
       if (color === "light") {
           let classes = `${scss['text']} ${scss['text--light']}`;
         element = (
-          <p className={classes + " " + styles}>
+          <p style={style} className={classes + " " + styles}>
             {children}
           </p>
         );
       } else {
         element = (
-          <p className={scss.text + " " + styles}>
+          <p style={style} className={scss.text + " " + styles}>
             {children}
           </p>
         );
@@ -72,7 +95,7 @@ function Typography({ styles, type, children, color }) {
 
     case "subtitle":
       element = (
-        <p className={scss.subtitle + " " + styles}>
+        <p style={style} className={scss.subtitle + " " + styles}>
           {children}
         </p>
       );

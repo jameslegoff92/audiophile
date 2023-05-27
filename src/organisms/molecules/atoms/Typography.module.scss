@@ -17,6 +17,7 @@
   font-size: 1.75rem; 
   line-height: normal;
   letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .h3 {
@@ -24,8 +25,9 @@
   font-family: $ff;
   font-weight: bold;
   font-size: 1.5rem; 
-  line-height: 36/24;
+  line-height: calc(36/24);
   letter-spacing: 0.86px;
+  text-transform: uppercase;
 }
 
 .h4 {
@@ -35,6 +37,7 @@
   font-size: 1.75rem; 
   line-height: normal;
   letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .h5 {
@@ -42,8 +45,9 @@
   font-family: $ff;
   font-weight: bold;
   font-size: 24px; 
-  line-height: 36/24;
+  line-height: calc(36/24);
   letter-spacing: 0.86px;
+  text-transform: uppercase;
 }
 
 .h6 {
@@ -53,6 +57,7 @@
   font-size: 15px; 
   line-height: auto;
   letter-spacing: 1.07px;
+  text-transform: uppercase;
 }
 
 .text {
@@ -60,7 +65,7 @@
   font-family: $ff;
   font-weight: medium;
   font-size: 0.9375rem; 
-  line-height: 25/15;
+  line-height: calc(25/15);
   letter-spacing: 0;
 }
 
@@ -68,16 +73,8 @@
   color: white;
 }
 
-.text--opacity-50 {
-  opacity: 50%;
-}
-
-.text--opacity-75 {
-  opacity: 75%;
-}
-
 .subtitle {
-  color: $black;
+  color: $white;
   font-family: $ff;
   font-weight: normal;
   font-size: 0.875rem; 
