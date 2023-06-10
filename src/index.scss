@@ -1,10 +1,13 @@
-*, ::before, ::after {
+*,
+::before,
+::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
+  max-width: 100%;
   min-width: 22.4375rem;
   overflow-x: hidden;
   font-size: 1rem;
@@ -13,4 +16,15 @@ body {
 .hr {
   border-bottom: solid 1px #979797;
   opacity: 10.4%;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.container-xl {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 6.4%;
 }

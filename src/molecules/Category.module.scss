@@ -1,0 +1,35 @@
+@import '../variables.scss';
+
+.category {
+  background-color: $light-grey;
+  border-radius: 8px;
+  text-align: center;
+  padding-top: 5.5rem;
+  position: relative;
+
+  &__img-headphones {
+    position: absolute;
+    top: -65px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10.1875rem;
+  }
+
+  &__img-speakers {
+    position: absolute;
+    top: -55px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 9.1875rem;
+  }
+
+  &__img-earphones {
+    position: absolute;
+    top: -55px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 144px;
+
+  }
+}
+

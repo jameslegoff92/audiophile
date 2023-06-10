@@ -1,4 +1,4 @@
-@import '../../../variables.scss';
+@import './../variables.scss';
 
 .btn {
   border: none;
@@ -42,6 +42,7 @@
 
 .btn--alt:hover {
   color: $orange;
+  opacity: 1;
 }
 
 .btn__icon {

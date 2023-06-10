@@ -1,7 +1,7 @@
 //Components
-import Nav from "./molecules/Nav";
-import MobileNav from "./molecules/MobileNav";
-import Hero from './molecules/Hero';
+import Nav from "../molecules/Nav";
+import MobileNav from "../molecules/MobileNav";
+import Hero from '../molecules/Hero';
 
 //SCSS Files
 import scss from "./Header.module.scss";

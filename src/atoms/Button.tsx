@@ -1,8 +1,11 @@
+import React from 'react';
+import { ComponentProps } from './../interfaces';
+
 //CSS
 import buttonStyles from './Button.module.scss';
 
 //IMAGES
-import iconArrowRight from './../../../assets/shared/desktop/icon-arrow-right.svg';
+import iconArrowRight from "../assets/shared/desktop/icon-arrow-right.svg";
 
 /**
  * <Button />
@@ -23,7 +26,11 @@ import iconArrowRight from './../../../assets/shared/desktop/icon-arrow-right.sv
  * />
  */
 
-function Button ({ children, type, style, styles }) {
+interface ButtonProps extends ComponentProps {
+  type: string,
+}
+
+function Button ({ children, type, style, styles }:ButtonProps) {
 
   let classes = `${styles} ${buttonStyles.btn}`;
 

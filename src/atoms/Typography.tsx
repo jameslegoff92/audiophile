@@ -1,3 +1,6 @@
+import React from 'react';
+import { ComponentProps } from './../interfaces';
+
 //SCSS
 import scss from "./Typography.module.scss";
 
@@ -7,12 +10,12 @@ import scss from "./Typography.module.scss";
  * A customizable react component for displaying different heading and paragraph elements.
  * 
  * @component
- * @param {object} style - Sets inline styling css for the component.
- * @param {string} styles - Adds css class styling from a parent component.
- * @param {string} type - Adds local class style to the component
- *                        Possible values: 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'text', 'subtitle'
- * @param {string} color - Adds an alternative css styling to the component.
- *                         Possible values: 'light'
+ * @param style - Sets inline styling css for the component.
+ * @param styles - Adds css class styling from a parent component.
+ * @param type - Adds local class style to the component
+ *               Possible values: 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'text', 'subtitle'
+ * @param color - Adds an alternative css styling to the component.
+ *                Possible values: 'light'
  * @return - Returns a single element
  * 
  * @example
@@ -24,7 +27,12 @@ import scss from "./Typography.module.scss";
  * />
  */
 
-function Typography({ style, styles, type, children, color }) {
+interface TypographyProps extends ComponentProps {
+  type: string,
+  color?: string
+}
+
+const Typography:React.FC<TypographyProps> = ({ style, styles, type, children, color }) => {
   let element;
 
   switch (type) {

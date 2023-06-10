@@ -1,0 +1,29 @@
+.category-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  padding: 6.25rem 0;
+
+  &__item {
+    margin: 0 auto;
+    width: clamp(327px, calc(327px + 3vw), 350px);
+
+    @media screen and (min-width: 874px) {
+      width: calc(32.571% - 1vw);
+      gap: calc(1.1442% + 1vw);
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 70px;
+
+    @media screen and (min-width: 540x) {
+      margin-bottom: 50px;
+    }
+
+    @media screen and (min-width: 874px) {
+      margin-bottom: 0;
+    }
+  }
+}

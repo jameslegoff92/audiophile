@@ -1,7 +1,7 @@
 //Components
 import Card from './Card';
-import Button from './atoms/Button';
-import Typography from './atoms/Typography';
+import Button from '../atoms/Button';
+import Typography from '../atoms/Typography';
 
 //SCSS
 import scss from './Hero.module.scss';
@@ -17,7 +17,7 @@ function Hero() {
   return (
     <div className={hero}>
       <div className={container} >
-        <Card styles={wrapper}>
+        <Card className={wrapper}>
           <Typography styles={subtitle} style={{ opacity: 0.5 }}  type={"subtitle"}>
             new product
           </Typography>

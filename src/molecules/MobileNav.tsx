@@ -1,5 +1,5 @@
 import scss from  './MobileNav.module.scss';
-import hamburgerIcon from '../../assets/shared/tablet/icon-hamburger.svg';
+import hamburgerIcon from '../assets/shared/tablet/icon-hamburger.svg';
 
 function MobileNav() {
 
