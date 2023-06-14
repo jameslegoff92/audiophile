@@ -1,0 +1,64 @@
+@import "./../variables.scss";
+
+$pattern-circles: url("../assets/home/desktop/pattern-circles.svg");
+
+.speaker-cta {
+  background: url("../assets/home/desktop/pattern-circles.svg") no-repeat 50% -150px/600px $orange;
+  padding: 3.4375rem 0;
+  min-height: 37.5rem;
+  text-align: center;
+
+  @media screen and (min-width: 69.375rem) {
+    background: url("../assets/home/desktop/pattern-circles.svg") no-repeat -200px 50px/1000px $orange;
+    min-height: 36rem;
+    overflow: hidden;
+    height: 20rem;
+    padding: 6rem 0 0 0;
+    text-align: left;
+  }
+
+  &__container {
+
+    @media screen and (min-width: 69.375rem) {
+      display: flex;
+      margin: 0 auto; 
+      width: 80%;
+    }
+  }
+
+  &__img {
+    display: block;
+    margin: 0 auto clamp(2rem, 0.09160305343511443rem + 8.142493638676845vw, 4rem);
+    width: calc(10.7656rem + 2vw);
+
+    @media screen and (min-width: 69.375rem) {
+      margin: 0;
+      width: 25.6394rem;
+    }
+  }
+
+  &__card {
+    margin: 0 auto;
+    width: 85.63%;
+    max-width: 21.8125rem;
+
+    @media screen and (min-width: 69.375rem) {
+      
+      margin: 20px 0 0 150px;
+      width: 25.6394rem;
+    }
+  }
+
+  &__title {
+    margin-bottom: 1.5rem;
+  }
+
+  &__text {
+    margin-bottom: 1.5rem;
+    margin-bottom: clamp(1.5rem, 0.5458015267175572rem + 4.071246819338422vw, 2.5rem);
+  }
+
+  &__btn {
+    display: inline-block;
+  }
+}

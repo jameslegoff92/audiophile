@@ -2,7 +2,7 @@ import React from 'react';
 import { ComponentProps } from './../interfaces';
 
 //CSS
-import buttonStyles from './Button.module.scss';
+import styles from './Button.module.scss';
 
 //IMAGES
 import iconArrowRight from "../assets/shared/desktop/icon-arrow-right.svg";
@@ -27,24 +27,28 @@ import iconArrowRight from "../assets/shared/desktop/icon-arrow-right.svg";
  */
 
 interface ButtonProps extends ComponentProps {
+  className?: string,
   type: string,
 }
 
-function Button ({ children, type, style, styles }:ButtonProps) {
+function Button ({ children, type, style, className }:ButtonProps) {
 
-  let classes = `${styles} ${buttonStyles.btn}`;
+  let classes = `${className} ${styles.btn}`;
 
-  let arrowRightIcon = <img className={buttonStyles['btn__icon']} src={iconArrowRight} alt=" " />;
+  let arrowRightIcon = <img className={styles['btn__icon']} src={iconArrowRight} alt=" " />;
 
   switch (type) {
     case 'light':
-      classes += ` ${buttonStyles['btn--light']}`;
+      classes += ` ${styles['btn--light']}`;
       break;
     case 'dark':
-      classes += ` ${buttonStyles['btn--dark']}`;
+      classes += ` ${styles['btn--dark']}`;
       break;
     case 'alt': 
-      classes += ` ${buttonStyles['btn--alt']}`;
+      classes += ` ${styles['btn--alt']}`;
+      break;
+    case 'black': 
+      classes += ` ${styles['btn--black']}`;
       break;
     default: 
 

@@ -27,4 +27,8 @@ body {
   max-width: 1110px;
   margin: 0 auto;
   padding: 6.4%;
+
+  @media (min-width: 1110px) {
+    padding: 0;
+  }
 }

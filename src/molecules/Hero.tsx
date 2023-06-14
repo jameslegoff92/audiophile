@@ -18,13 +18,13 @@ function Hero() {
     <div className={hero}>
       <div className={container} >
         <Card className={wrapper}>
-          <Typography styles={subtitle} style={{ opacity: 0.5 }}  type={"subtitle"}>
+          <Typography className={subtitle} style={{ opacity: 0.5 }}  type={"subtitle"}>
             new product
           </Typography>
-          <Typography styles={heading} type="h1">
+          <Typography className={heading} type="h1">
             xx99 mark ii headphones
           </Typography>
-          <Typography styles={text} style={{ opacity: 0.75 }} type="p" color="light">
+          <Typography className={text} style={{ opacity: 0.75 }} type="p" color="light">
             Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.
           </Typography>
           <Button type="dark" >

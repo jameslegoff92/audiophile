@@ -11,7 +11,7 @@ import scss from "./Typography.module.scss";
  * 
  * @component
  * @param style - Sets inline styling css for the component.
- * @param styles - Adds css class styling from a parent component.
+ * @param className - Adds css class styling from a parent component.
  * @param type - Adds local class style to the component
  *               Possible values: 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'text', 'subtitle'
  * @param color - Adds an alternative css styling to the component.
@@ -21,7 +21,7 @@ import scss from "./Typography.module.scss";
  * @example
  * <Typography
  *  style={{backgroundColor: 'red'}}
- *  styles={parentCSS['card__heading']}
+ *  className={parentCSS['card__heading']}
  *  type='h1'
  *  color='light'
  * />
@@ -29,16 +29,17 @@ import scss from "./Typography.module.scss";
 
 interface TypographyProps extends ComponentProps {
   type: string,
+  className? : string,
   color?: string
 }
 
-const Typography:React.FC<TypographyProps> = ({ style, styles, type, children, color }) => {
+const Typography:React.FC<TypographyProps> = ({ style, className, type, children, color }) => {
   let element;
 
   switch (type) {
     case "h1":
       element = (
-        <h1 className={scss.h1 + " " + styles}>
+        <h1 className={scss.h1 + " " + className}>
           {children}
         </h1>
       );
@@ -46,7 +47,7 @@ const Typography:React.FC<TypographyProps> = ({ style, styles, type, children, c
 
     case "h2":
       element = (
-        <h2 className={scss.h2 + " " + styles}>
+        <h2 className={scss.h2 + " " + className}>
           {children}
         </h2>
       );
@@ -54,7 +55,7 @@ const Typography:React.FC<TypographyProps> = ({ style, styles, type, children, c
 
     case "h3":
       element = (
-        <h3 className={scss.h3 + " " + styles}>
+        <h3 className={scss.h3 + " " + className}>
           {children}
         </h3>
       );
@@ -62,7 +63,7 @@ const Typography:React.FC<TypographyProps> = ({ style, styles, type, children, c
 
     case "h4":
       element = (
-        <h4 className={scss.h4 + " " + styles}>
+        <h4 className={scss.h4 + " " + className}>
           {children}
         </h4>
       );
@@ -70,7 +71,7 @@ const Typography:React.FC<TypographyProps> = ({ style, styles, type, children, c
 
     case "h5":
       element = (
-        <h5 className={scss.h5 + " " + styles}>
+        <h5 className={scss.h5 + " " + className}>
           {children}
         </h5>
       );
@@ -78,7 +79,7 @@ const Typography:React.FC<TypographyProps> = ({ style, styles, type, children, c
 
     case "h6":
       element = (
-        <h6 className={scss.h6 + " " + styles}>
+        <h6 className={scss.h6 + " " + className}>
           {children}
         </h6>
       );
@@ -88,13 +89,13 @@ const Typography:React.FC<TypographyProps> = ({ style, styles, type, children, c
       if (color === "light") {
           let classes = `${scss['text']} ${scss['text--light']}`;
         element = (
-          <p style={style} className={classes + " " + styles}>
+          <p style={style} className={classes + " " + className}>
             {children}
           </p>
         );
       } else {
         element = (
-          <p style={style} className={scss.text + " " + styles}>
+          <p style={style} className={scss.text + " " + className}>
             {children}
           </p>
         );
@@ -103,7 +104,7 @@ const Typography:React.FC<TypographyProps> = ({ style, styles, type, children, c
 
     case "subtitle":
       element = (
-        <p style={style} className={scss.subtitle + " " + styles}>
+        <p style={style} className={scss.subtitle + " " + className}>
           {children}
         </p>
       );

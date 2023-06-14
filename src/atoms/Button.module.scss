@@ -48,3 +48,13 @@
 .btn__icon {
   margin-left: 1rem;
 }
+
+.btn--black {
+  color: $white;
+  background-color: $black;
+}
+
+.btn--black:hover {
+  background-color: #4C4C4C;
+  cursor: pointer;
+}
