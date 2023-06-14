@@ -4,6 +4,7 @@ import React from "react";
 import Button from "../atoms/Button";
 import Card from "./Card";
 import Typography from "../atoms/Typography";
+import Picture from "../atoms/Picture";
 
 //CSS
 import styles from "./SpeakerCta.module.scss";
@@ -24,12 +25,16 @@ const SpeakerCta = () => {
 
   return (
     <Card style={{ borderRadius: "8px" }} className={speakerCta}>
-      <div className={containerCSS} >
-        <picture>
-          <source media="(min-width: 1024px)" srcSet={speakerImgDesktop} />
-          <source media="(min-width: 768px)" srcSet={speakerImgTablet} />
-          <img className={imgCSS} src={speakerImgMobile} alt="The ZX9 speaker product" />
-        </picture>
+      <div className={containerCSS}>
+        <Picture
+          className={imgCSS}
+          src={speakerImgMobile}
+          alt="The ZX9 speaker product"
+          mdScreen="768px"
+          mdImg={speakerImgTablet}
+          lgScreen="1024px"
+          lgImg={speakerImgDesktop}
+        />
         <Card className={cardCSS}>
           <Typography className={titleCSS} type="h1">
             ZX9 <br /> Speaker{" "}
